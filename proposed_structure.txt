@@ -1,0 +1,31 @@
+proyecto-credit risk/
+│
+├── data/
+│   ├── raw/              # Raw data
+│   └── processed/        # Preprocessed and clean data
+│
+├── notebooks/            # Jupyter notebooks for EDA & models prototypes
+│
+├── src/                  # Source code of the project
+│   ├── data_preparation/ # Scripts for cleaning and preparing the data
+│   ├── models/           # Scripts for training and model evaluation
+│   │   ├── train.py      # Script for training model
+│   │   └── evaluate.py   # Script for model evaluation and obtaining metrics
+│   └── api/              # API's source code
+│       ├── app.py        # FastAPI app main
+│       └── dependencies/ # Dependences, settings, and utils for API
+│
+├── tests/                # Tests for the different project's modules
+│
+├── docker/               # Necessary files for Dockerizing the app
+│   ├── Dockerfile        # Dockerfile for building the app image
+│   └── docker-compose.yml# Docker Compose for orchestrating 
+│
+├── ui/                   # User Interface
+│   ├── index.html        # Main page of the form
+│   ├── css/              # Style sheets CSS
+│   └── js/               # Scripts JavaScript for API interaction
+│
+├── .gitignore            # Files and folders to ignore in git
+├── requirements.txt      # Python requirements to install
+└── README.md             # Project documentation, usage instructions, etc.

@@ -1,0 +1,6 @@
+boto3
+pandas
+xlrd
+scikit-learn
+streamlit
+joblib
