@@ -1,0 +1,35 @@
+version: "3.2"
+
+services:
+  app:
+    image: streamlit_app
+    container_name: streamlit_app
+    build:
+      context: ./app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app:/app
+
+  api:
+    image: api_cr
+    container_name: api_cr
+    build:
+      context: ./api
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./api:/api
+
+  redis:
+    image: redis:6.2.6
+
+  model:
+    image: ml_service
+    container_name: ml_service
+    build:
+      context: ./model    
+    depends_on:
+      - redis
+    volumes:
+      - ./model:/model
